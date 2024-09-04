@@ -22,7 +22,7 @@ class SuiteController extends Controller
      */
     public function create()
     {
-        //
+        return view('suites.create');
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Reservaton;
+use App\Models\Suite;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -22,7 +23,8 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+        $suites = Suite::all();
+        return view("reservations.create"  , compact('suites'));
     }
 
     /**
