@@ -1,4 +1,4 @@
-@props(['label' , 'type' , 'name'])
+@props(['label' , 'type' , 'name' , "value" => ""])
 
 <div class="mb-5">
     <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{$label}}</label>
@@ -9,6 +9,7 @@
                 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
                  dark:focus:border-blue-500"
         name="{{$name}}"
+        value="{{$value}}"
     >
 </div>
 

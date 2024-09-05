@@ -32,7 +32,18 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "firstName" =>["required" , "string" , "max:30" , ] , 
+            "lastName" =>["required"   , 'string' , 'max:30'], 
+            "phone" =>["required" , 'string' , 'max:20'] , 
+            "email" =>["required" , 'string'  ] , 
+            "adress" =>["required" , 'string' , 'max:50'] , 
+            "details" =>["required" , 'string' , 'max:1000'] , 
+            "suite_id" =>["required" , 'integer'] , 
+
+        ]);
+        Reservaton::create($request->all());
+        return to_route("reservations.index");
     }
 
     /**
@@ -48,7 +59,9 @@ class ReservationController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $reservation  = Reservaton::find($id);
+        $suites = Suite::all();
+        return view('reservations.edit' , compact('reservation' , "suites"));
     }
 
     /**
@@ -56,7 +69,19 @@ class ReservationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            "firstName" =>["required" , "string" , "max:30" , ] , 
+            "lastName" =>["required"   , 'string' , 'max:30'], 
+            "phone" =>["required" , 'string' , 'max:20'] , 
+            "email" =>["required" , 'string'  ] , 
+            "adress" =>["required" , 'string' , 'max:50'] , 
+            "details" =>["required" , 'string' , 'max:1000'] , 
+            "suite_id" =>["required" , 'integer'] , 
+
+        ]);
+        $reservation =  Reservaton::find($id);
+        $reservation ->update($request->all());
+        return to_route("reservations.index");
     }
 
     /**
@@ -64,6 +89,8 @@ class ReservationController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $reservation = Reservaton::find($id);
+        $reservation ->delete();
+        return to_route("reservations.index");
     }
 }

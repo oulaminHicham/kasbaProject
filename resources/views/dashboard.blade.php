@@ -4,14 +4,14 @@
             {{ __('dashbord') }}
         </h2>
     </x-slot> --}}
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("house skoura") }}
-                </div>
+   <div class="h-full flex justify-center items-center sm:p-48">
+        <div class="grid  sm:grid-cols-2 sm:gap-40 grid-rows-1 gap-4">
+            <div class="bg-red-400 text-red-50 w-72 h-48 rounded-lg  flex justify-center items-center hover:bg-red-300 sm:m-0 m-5">
+                    <a class="btn" href="{{route('reservations.index')}}">{{$numOfReservation}} reservation</a>
+            </div>
+            <div class="bg-red-400 text-red-50 w-72 h-48 rounded-lg flex justify-center items-center hover:bg-red-300 sm:m-0 m-5">
+                <a class="btn" href="{{route('suites.index')}}">{{$numOfSuites}} suite</a>
             </div>
         </div>
-    </div>
+   </div>
 </x-app-layout>

@@ -30,7 +30,15 @@ class SuiteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "description" =>["required" , "string" , "min:10"] , 
+            "avantages" =>["required"   , 'string'], 
+            "classification" =>["required" , 'string'] , 
+
+        ]);
+        $request['avantages'] = array_map('trim', explode(',', $request->avantages));
+        Suite::create($request->all());
+        return to_route("suites.index");
     }
 
     /**
@@ -46,7 +54,8 @@ class SuiteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $suite = Suite::find($id);
+        return view('suites.edit'  , compact('suite'));
     }
 
     /**
@@ -54,7 +63,17 @@ class SuiteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            "description" =>["required" , "string" , "min:10"] , 
+            "avantages" =>["required"   , 'string'], 
+            "classification" =>["required" , 'string'] , 
+
+        ]);
+        $request['avantages'] = array_map('trim', explode(',', $request->avantages));
+        $suite = Suite::find($id);
+        $suite->update($request->all());
+        return to_route("suites.index");
+
     }
 
     /**
@@ -62,6 +81,9 @@ class SuiteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $suite = Suite::find($id);
+        $suite-> delete();
+        return to_route("suites.index");
+
     }
 }

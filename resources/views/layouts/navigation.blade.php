@@ -100,10 +100,10 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('house skoura') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('suite')">
+            <x-responsive-nav-link :href="route('suites.index')" :active="request()->routeIs('suite')">
                 {{ __('suite') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('reservation')">
+            <x-responsive-nav-link :href="route('reservations.index')" :active="request()->routeIs('reservation')">
                 {{ __('Reservation') }}
             </x-responsive-nav-link>
         </div>
@@ -133,6 +133,4 @@
             </div>
         </div>
     </div>
-
-
 </nav>
