@@ -8,6 +8,7 @@
         <x-input label="avantages" type='text' name="avantages"/>
 
         <x-input label="classification" type='text' name="classification"/>
+        <x-input label="prix" type='number' name="prix"/>
 
         <x-button color="blue">Ajouter</x-button>
     </form>

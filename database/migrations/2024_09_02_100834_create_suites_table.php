@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('description');
             $table->json('avantages');
             $table->string('classification');
+            $table->float('prix');
             $table->timestamps();
         });
     }

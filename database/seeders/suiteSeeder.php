@@ -17,7 +17,8 @@ class suiteSeeder extends Seeder
             
                 'description'=>'descreptio 1' ,
                 'avantages'=>['av1' , 'av2' , 'av3'],
-                'classification'=>'class 1'
+                'classification'=>'class 1',
+                'prix'=>'10000',
             
         ]);
     }

@@ -34,6 +34,8 @@ class SuiteController extends Controller
             "description" =>["required" , "string" , "min:10"] , 
             "avantages" =>["required"   , 'string'], 
             "classification" =>["required" , 'string'] , 
+            "prix" =>["required" ] , 
+
 
         ]);
         $request['avantages'] = array_map('trim', explode(',', $request->avantages));
@@ -67,6 +69,7 @@ class SuiteController extends Controller
             "description" =>["required" , "string" , "min:10"] , 
             "avantages" =>["required"   , 'string'], 
             "classification" =>["required" , 'string'] , 
+            "prix" =>["required" ] , 
 
         ]);
         $request['avantages'] = array_map('trim', explode(',', $request->avantages));

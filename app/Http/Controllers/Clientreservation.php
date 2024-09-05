@@ -12,4 +12,8 @@ class Clientreservation extends Controller
         $suites = Suite::all();
         return view('Clientreservation.index' , compact('suites'));
     }
+
+    public function card(){
+        return view('Clientreservation.card');
+    }
 }

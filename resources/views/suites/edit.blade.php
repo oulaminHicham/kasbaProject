@@ -10,6 +10,7 @@
         @endphp
         <x-input label="avantages" type='text' name="avantages"  value="{{$avantage}}"/>
         <x-input label="classification" type='text' name="classification" value="{{$suite->classification}}" />
+        <x-input label="prix" type='number' name="prix" value="{{$suite->prix}}" />
 
         <button type="submit" class="btn bg-blue-400 px-3 py-2 rounded-lg w-72 text-red-50">Modifier</button>
 

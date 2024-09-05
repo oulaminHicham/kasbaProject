@@ -13,6 +13,7 @@ Route::get('/', function () {
 });
 //reservation page
 Route::get('/reservation' , [Clientreservation::class , 'index'])->name('reservation');
+Route::get('/card' , [Clientreservation::class , 'card'])->name('card');
 
 Route::get('/dashboard', [DashboardController::class , 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

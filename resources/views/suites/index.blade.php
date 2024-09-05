@@ -11,6 +11,7 @@
                         <th scope="col" class="px-6 py-3">description</th>
                         <th scope="col" class="px-6 py-3">avantages</th>
                         <th scope="col" class="px-6 py-3">classification</th>
+                        <th scope="col" class="px-6 py-3">prix</th>
                         <th scope="col" class="px-6 py-3">operations</th>
                     </tr>
                 </thead>
@@ -24,6 +25,7 @@
                             @endforeach
                         </td>
                         <td class="px-6 py-4">{{$suite->classification}}</td>
+                        <td class="px-6 py-4">{{$suite->prix}}</td>
                         <td>
                             <button    class="focus:outline-none text-white bg-green-700
                                             hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium
