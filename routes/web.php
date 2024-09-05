@@ -1,14 +1,18 @@
 <?php
 
+use App\Http\Controllers\Clientreservation;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SuiteController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+//reservation page
+Route::get('/reservation' , [Clientreservation::class , 'index'])->name('reservation');
 
 Route::get('/dashboard', [DashboardController::class , 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
