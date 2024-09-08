@@ -35,11 +35,18 @@ class SuiteController extends Controller
             "avantages" =>["required"   , 'string'], 
             "classification" =>["required" , 'string'] , 
             "prix" =>["required" ] , 
-
-
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        $request['avantages'] = array_map('trim', explode(',', $request->avantages));
-        Suite::create($request->all());
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+
+        Suite::create([
+            "description"=>$request->description ,
+            "avantages"=> array_map('trim', explode(',', $request->avantages)) ,
+            "classification"=>$request->classification ,
+            "prix"=>$request->prix ,
+            "image"=>"images/$imageName" ,
+        ]);
         return to_route("suites.index");
     }
 

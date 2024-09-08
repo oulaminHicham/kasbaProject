@@ -12,7 +12,7 @@ class Suite extends Model
         'avantages' => 'array'
     ];
 
-    protected $fillable = ['description','avantages','address' , 'classification' , 'prix'];
+    protected $fillable = ['description','avantages','address' , 'classification' , 'prix' , 'image'];
 
         
 }

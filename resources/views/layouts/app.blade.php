@@ -15,13 +15,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <style>
-        img{
+        /* img{
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-bottom: 30px;
             
-        }
+        } */
     </style>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">

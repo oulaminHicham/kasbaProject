@@ -17,6 +17,7 @@ return new class extends Migration
             $table->json('avantages');
             $table->string('classification');
             $table->float('prix');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
