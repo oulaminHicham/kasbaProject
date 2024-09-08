@@ -8,8 +8,8 @@
     <title>reservation</title>
     @vite('resources/css/app.css')
 </head>
-<body>
+<body  class="bg-indigo-50">
     <x-navbare />
-    {{$slot}}    
+        {{$slot}}    
 </body>
 </html>
