@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('reservations' , ReservationController::class);
 });
 
+Route::get('/contact' , function(){
+    return view('contactUs');
+})->name('contact');
+
 require __DIR__.'/auth.php';
 
 

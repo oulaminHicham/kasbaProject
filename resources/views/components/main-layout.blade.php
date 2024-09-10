@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>reservation</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/carsoul.js')
 </head>
 <body  class="bg-indigo-50">
     <x-navbare />
