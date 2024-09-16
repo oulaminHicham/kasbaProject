@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Clientreservation;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PayementController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SuiteController;
@@ -13,7 +14,12 @@ Route::get('/', function () {
 });
 //reservation page
 Route::get('/reservation' , [Clientreservation::class , 'index'])->name('reservation');
-Route::get('/card' , [Clientreservation::class , 'card'])->name('card');
+Route::get('/card' , [PayementController::class , 'index'])->name('card');
+
+// handel payement routes
+Route::post('stripe' , [PayementController::class , 'stripe'])->name('stripe');
+Route::get('success' , [PayementController::class , 'success'])->name('success');
+Route::get('cancel' , [PayementController::class , 'cancel'])->name('cancel');
 
 Route::get('/dashboard', [DashboardController::class , 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

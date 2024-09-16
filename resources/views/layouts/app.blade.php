@@ -57,7 +57,7 @@
                 </svg>
                 <span class="sr-only">Toggle sidebar</span>
               </button>
-              <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
+              <a href="{{route('dashboard')}}" class="flex items-center justify-between mr-4">
                 <img
                   src="{{url('images/logo-removebg-preview.png')}}"
                   class="w-12 font-bold h-12"

@@ -15,11 +15,10 @@ class reservationSeeder extends Seeder
     {
         Reservaton::create([
             
-                'firstName'=>'0001' ,
-                'lastName'=>'001' ,
-                'phone'=>'12345678' ,
+                'fullName'=>'0001' ,
                 'email'=>'email@gmail.com' ,
-                'adress'=>'adres1 adres dffjf' ,
+                'price'=>100 ,
+                // 'adress'=>'adres1 adres dffjf' ,
                 'details'=>'i want ot see all what what you have' ,
                 'suite_id'=>Suite::inRandomOrder()->first()->id
             

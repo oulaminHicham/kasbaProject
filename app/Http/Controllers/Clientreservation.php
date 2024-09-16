@@ -13,7 +13,5 @@ class Clientreservation extends Controller
         return view('Clientreservation.index' , compact('suites'));
     }
 
-    public function card(){
-        return view('Clientreservation.card');
-    }
+
 }

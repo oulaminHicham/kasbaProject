@@ -3,8 +3,7 @@
         @csrf
         <h3 class="text-center m-4 text-2xl font-sm dark:text-white">Ajouter Reservation</h3>
 
-        <x-input label="first name" type='text' name="firstName" />
-        <x-input label="last name" type='text' name="lastName"/>
+        <x-input label="first name" type='text' name="fullName" />
         <x-input label="phone" type='tel' name="phone"/>
         <x-input label="email" type='email' name="email"/>
         <x-input label="adress" type='text' name="adress"/>

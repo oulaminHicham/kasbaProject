@@ -22,11 +22,8 @@
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
-                                <th scope="col" class="px-6 py-3">Client Name</th>
-                                <th scope="col" class="px-6 py-3">Client Last Name</th>
-                                <th scope="col" class="px-6 py-3">Phone</th>
+                                <th scope="col" class="px-6 py-3">fullName</th>
                                 <th scope="col" class="px-6 py-3">Email</th>
-                                <th scope="col" class="px-6 py-3">Adress</th>
                                 <th scope="col" class="px-6 py-3">Suite</th>
                                 <th scope="col" class="px-6 py-3">Operations</th>
                                 <th scope="col" class="px-4 py-3">
@@ -37,11 +34,8 @@
                         <tbody>
                             @foreach ($reservations as $reservation)
                                 <tr class="border-b dark:border-gray-700">
-                                    <td class="px-6 py-4">{{$reservation->firstName}}</td>
-                                    <td class="px-6 py-4">{{$reservation->lastName}}</td>
-                                    <td class="px-6 py-4">{{$reservation->phone}}</td>
+                                    <td class="px-6 py-4">{{$reservation->fullName}}</td>
                                     <td class="px-6 py-4">{{$reservation->email}}</td>
-                                    <td class="px-6 py-4">{{$reservation->adress}}</td>
                                     <td class="px-6 py-4">{{$reservation->suite_id}}</td>
                                     <td class="px-4 py-3 flex items-center justify-end">
                                         <button id="apple-imac-27-dropdown-button" data-dropdown-toggle="apple-imac-27-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100" type="button">

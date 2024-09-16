@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Reservaton extends Model
 {
     use HasFactory;
-    protected $fillable = ['firstName','lastName','phone','email' ,'adress' , 'details' , 'suite_id' ];
+    protected $fillable = ['fullName','price','email' ,'payment_status' , 'details' , 'suite_id'];
 
 }

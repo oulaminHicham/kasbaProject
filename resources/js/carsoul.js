@@ -23,8 +23,10 @@ let carsoulImage = document.getElementById('carsoulImager');
 
 
 // set duaration to automatic change carsour image
-setInterval(() => {
-    let randomNumber = Math.floor(Math.random() * listeOfImages.length );
-    let currentImages = listeOfImages[randomNumber] ;
-    carsoulImage.src = currentImages ;
-}, 3000);
+if(carsoulImage){
+    setInterval(() => {
+        let randomNumber = Math.floor(Math.random() * listeOfImages.length );
+        let currentImages = listeOfImages[randomNumber] ;
+        carsoulImage.src = currentImages ;
+    }, 3000);
+}

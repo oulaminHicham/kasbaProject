@@ -13,18 +13,16 @@ return new class extends Migration
     {
         Schema::create('reservatons', function (Blueprint $table) {
             $table->id();
-            $table->string('firstName');
-            $table->string('lastName');
-            $table->string('phone');
+            $table->string('fullName');
             $table->string('email');
-            $table->string('adress');
-            $table->string('details');
+            $table->string('price');
+            $table->string('details')->nullable();
             $table->foreignId('suite_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
 
-    /**
+    /**s
      * Reverse the migrations.
      */
     public function down(): void
