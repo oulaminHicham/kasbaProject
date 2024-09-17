@@ -15,18 +15,9 @@
             <p id="" class="animate-rotate-x mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest
              first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900
               dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
-                Skoura house across the enterprise through an open, collaborative platform. Link issues across Jira and ingest
-                data from other software development tools, so your IT support and operations teams have richer contextua
-                l information to rapidly respond to requests, incidents, and changes.
-                Skoura house across the enterprise through an open, collaborative platform. Link issues across Jira and ingest
-                data from other software development tools, so your IT support and operations teams have richer contextua
-                l information to rapidly respond to requests, incidents, and changes.
-                Skoura house across the enterprise through an open, collaborative platform. Link issues across Jira and ingest
-                data from other software development tools, so your IT support and operations teams have richer contextua
-                l information to rapidly respond to requests, incidents, and changes.
+              @lang('general.aboutContent')
             </p>
         </main>
-
         <main>
             
 

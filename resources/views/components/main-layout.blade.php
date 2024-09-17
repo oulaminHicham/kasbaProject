@@ -8,6 +8,8 @@
     <title>reservation</title>
     @vite('resources/css/app.css')
     @vite('resources/js/carsoul.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <script src="https://js.stripe.com/v3/"></script>
 
 </head>
