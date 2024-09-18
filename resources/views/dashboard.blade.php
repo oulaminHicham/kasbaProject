@@ -1,69 +1,34 @@
-    {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('dashbord') }}
-        </h2>
-    </x-slot> --}}
-   {{-- <div class="h-full flex justify-center items-center sm:p-48">
-        <div class="grid  sm:grid-cols-2 sm:gap-40 grid-rows-1 gap-4">
-            <div class="bg-red-400 text-red-50 w-72 h-48 rounded-lg  flex justify-center items-center hover:bg-red-300 sm:m-0 m-5">
-                    <a class="btn" href="{{route('reservations.index')}}">{{$numOfReservation}} reservation</a>
-            </div>
-            <div class="bg-red-400 text-red-50 w-72 h-48 rounded-lg flex justify-center items-center hover:bg-red-300 sm:m-0 m-5">
-                <a class="btn" href="{{route('suites.index')}}">{{$numOfSuites}} suite</a>
-            </div>
-        </div>
-   </div> --}}
-
 
 <x-app-layout>
   
-    <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-8  w-full sm:w-[90%] sm:mx-52  mx-auto">
+    <section class="bg-white py-8 antialiased dark:bg-gray-900">
         <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
 
           <h2 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl md:mb-6">General overview</h2>
           <div class="flex justify-around border-b border-t border-gray-200 py-4 dark:border-gray-700 md:py-8 lg:grid-cols-4 xl:gap-16">
             <div>
-              <svg class="mb-2 h-8 w-8 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
-              </svg>
-              <h3 class="mb-2 text-gray-500 dark:text-gray-400">Orders made</h3>
-              <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
-                >24
-                <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                  <svg class="-ms-1 me-1 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"></path>
-                  </svg>
-                  10.3%
-                </span>
-              </span>
-              <p class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400 sm:text-base">
-                <svg class="me-1.5 h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              <div class="flex gap-5">
+                <svg class="mb-2 h-8 w-8 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
                 </svg>
-                vs 20 last 3 months
-              </p>
+                <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
+                >{{$numOfReservation}}
+              </span>
+              </div>
+              <h3 class="mb-2 text-gray-500 dark:text-gray-400">Orders made</h3>
             </div>
+
             <div>
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
                   </svg>
+                  <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
+                  >{{$numOfSuites}}
+                </span>
+                </div>
                   
               <h3 class="mb-2 text-gray-500 dark:text-gray-400">suites</h3>
-              <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
-                >16
-                <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                  <svg class="-ms-1 me-1 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"></path>
-                  </svg>
-                  8.6%
-                </span>
-              </span>
-              <p class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400 sm:text-base">
-                <svg class="me-1.5 h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-                vs 14 last 3 months
-              </p>
             </div>
 
           </div>

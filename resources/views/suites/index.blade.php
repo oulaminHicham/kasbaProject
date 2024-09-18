@@ -1,5 +1,5 @@
 <x-app-layout>
-        <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 m-4 mt-12   w-full">
+        <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 m-4 mt-12 w-full">
             <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
                 <!-- Start coding here -->
                 <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
@@ -19,7 +19,7 @@
                         <table class="w-full sm:w-[70%]  text-sm text-left text-gray-500 dark:text-gray-400 ">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3"></th>
+                                    <th scope="col" class="px-6 py-3">image</th>
                                     <th scope="col" class="px-6 py-3">description</th>
                                     <th scope="col" class="px-6 py-3">adventages</th>
                                     <th scope="col" class="px-6 py-3">classification</th>
@@ -35,30 +35,39 @@
                                         <td class="px-6 py-4">
                                             <img class="max-h-[100px] max-w-[100px] rounded-sm" src="{{url($suite->image)}}" alt="">
                                         </td>
-                                        <td class="px-6 py-4">{{$suite->description}}</td>
+
+                                        <td class="px-6 py-4">{{substr($suite->description,0,80)}}</td>
                                         <td>
                                             @foreach ($suite->avantages as $avantage)
                                                 <span>{{$avantage}}</span> ,
                                             @endforeach
                                         </td>
                                         <td class="px-6 py-4">{{$suite->classification}}</td>
-                                        <td class="px-6 py-4">{{$suite->prix}}</td>
-                                        <td class="px-4 py-3 flex items-center justify-end">
-                                            <button id="apple-imac-27-dropdown-button" data-dropdown-toggle="apple-imac-27-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100" type="button">
-                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                </svg>
-                                            </button>
-                                            <div id="apple-imac-27-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="apple-imac-27-dropdown-button">
-                                                    <li>
-                                                        <a href="{{route('suites.edit' , $suite->id)}}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                                    </li>
-                                                </ul>
-                                                <div class="py-1">
-                                                    <a href="{{route('suites.destroy' , $suite->id)}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                                </div>
-                                            </div>
+                                        <td class="px-6 py-4">{{$suite->prix}} MAD</td>
+
+                                        <td class="px-2  flex gap-1 h-[100px] items-center">
+                                            {{-- <a href="{{route('suites.show' , $suite->id)}}" class="rounded-md bg-blue-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                                                show
+                                            </a> --}}
+                                            <x-show
+                                                id="{{$suite->id}}"
+                                                price="{{$suite->prix}}"
+                                                classification="{{$suite->classification}}"
+                                                description="{{$suite->description}}"
+                                                avantages="{{implode(',' , $suite->avantages)}}"
+                                            />
+                                            <a 
+                                                href="{{route('suites.edit' , $suite->id)}}" 
+                                                class="rounded-md bg-green-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                                                Edit
+                                            </a>
+                                            <form action="{{route('suites.destroy' , $suite->id)}}" method="POST" class="inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="rounded-md bg-red-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                                                    Delete
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

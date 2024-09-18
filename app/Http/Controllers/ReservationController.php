@@ -33,11 +33,9 @@ class ReservationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "firstName" =>["required" , "string" , "max:30" , ] , 
-            "lastName" =>["required"   , 'string' , 'max:30'], 
-            "phone" =>["required" , 'string' , 'max:20'] , 
+            "fullName" =>["required" , "string" , "max:30" , ] , 
             "email" =>["required" , 'string'  ] , 
-            "adress" =>["required" , 'string' , 'max:50'] , 
+            "price" =>["required" , 'string'  ] , 
             "details" =>["required" , 'string' , 'max:1000'] , 
             "suite_id" =>["required" , 'integer'] , 
 
@@ -70,14 +68,11 @@ class ReservationController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            "firstName" =>["required" , "string" , "max:30" , ] , 
-            "lastName" =>["required"   , 'string' , 'max:30'], 
-            "phone" =>["required" , 'string' , 'max:20'] , 
+            "fullName" =>["required" , "string" , "max:30" , ] , 
             "email" =>["required" , 'string'  ] , 
-            "adress" =>["required" , 'string' , 'max:50'] , 
+            "price" =>["required" , 'string'  ] , 
             "details" =>["required" , 'string' , 'max:1000'] , 
             "suite_id" =>["required" , 'integer'] , 
-
         ]);
         $reservation =  Reservaton::find($id);
         $reservation ->update($request->all());

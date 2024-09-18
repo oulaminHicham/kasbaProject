@@ -35,7 +35,7 @@ class SuiteController extends Controller
             "avantages" =>["required"   , 'string'], 
             "classification" =>["required" , 'string'] , 
             "prix" =>["required" ] , 
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
         $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path('images'), $imageName);
@@ -55,7 +55,8 @@ class SuiteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $suite = Suite::find($id);
+        return view('suites.show' , compact('suite'));
     }
 
     /**
