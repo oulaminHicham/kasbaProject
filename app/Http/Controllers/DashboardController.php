@@ -12,6 +12,7 @@ class DashboardController extends Controller
     public function index(){
         $numOfSuites = count(Suite::all());
         $numOfReservation = count(Reservaton::all());
-        return view('dashboard' , compact('numOfSuites' , 'numOfReservation'));
+        $reservations = Reservaton::all();
+        return view('dashboard' , compact('numOfSuites' , 'numOfReservation' , 'reservations'));
     }
 }

@@ -12,6 +12,10 @@ class Clientreservation extends Controller
         $suites = Suite::all();
         return view('Clientreservation.index' , compact('suites'));
     }
+    public function show(string $id){
+        $suite = Suite::find($id) ;
+        return view('Clientreservation.show' , data: compact('suite'));
+    }
 
 
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Parametre;
+use App\Models\Stripe;
 use Illuminate\Http\Request;
 
 class ParametreController extends Controller
@@ -12,7 +14,9 @@ class ParametreController extends Controller
      */
     public function index()
     {
-        //
+        $parametres  = Parametre::all();
+        $stripe = Stripe::all();
+        return view('parametres.parametre' ,compact('parametres' , 'stripe'));
     }
 
     /**
@@ -20,7 +24,7 @@ class ParametreController extends Controller
      */
     public function create()
     {
-        //
+        return view('parametres.create');
     }
 
     /**
@@ -28,7 +32,15 @@ class ParametreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                "lang"=>'string|unique:parametres,lang|required' ,
+                'about_us'=>'required |string'
+            ]
+        );
+        Parametre::create($request->all());
+        return to_route('parametres.index');
+
     }
 
     /**
@@ -44,7 +56,8 @@ class ParametreController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $parametre = Parametre::find($id);
+        return view('parametres.editAbout' , compact('parametre'));
     }
 
     /**
@@ -52,7 +65,13 @@ class ParametreController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'lang'=>"required | string " ,
+            "about_us"=>"required|string"
+        ]);
+        $parametre = Parametre::find($id);
+        $parametre->update($request->all());
+        return to_route('parametres.index');
     }
 
     /**
@@ -60,6 +79,9 @@ class ParametreController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $parametre = Parametre::find($id);
+        $parametre ->delete();
+        return to_route('parametres.index');
+
     }
 }

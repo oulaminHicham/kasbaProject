@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('price');
             $table->string('details')->nullable();
             $table->foreignId('suite_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->date('date_arive');
+            $table->date('date_depart');
             $table->timestamps();
         });
     }

@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Parametre extends Model
 {
     use HasFactory;
-    protected $fillable = ['politique','about_us'];
+    protected $fillable = ['politique','about_us' , 'lang'];
 
 }

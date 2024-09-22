@@ -1,4 +1,4 @@
-@props(['label' , 'type' , 'name' , "value" => ""])
+@props(['label'=>'' , 'type' , 'name'=>'' , "value" => ""])
 
 <div class="mb-5">
     <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{$label}}</label>
@@ -10,6 +10,7 @@
                  dark:focus:border-blue-500"
         name="{{$name}}"
         value="{{$value}}"
+        autocomplete="of"
     >
 </div>
 

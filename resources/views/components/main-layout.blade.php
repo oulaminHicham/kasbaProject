@@ -13,11 +13,14 @@
     <script src="https://js.stripe.com/v3/"></script>
 
 </head>
-<body  class="bg-indigo-50">
+@php($direction = app()->getLocale() =='ar' ? 'rtl':'ltr')
+<body  class="bg-indigo-50" dir="{{$direction}}">
     <x-navbare />
-        {{$slot}}    
-        <div id="checkout">
-            <!-- Checkout will insert the payment form here -->
-        </div>
+    <main class="pt-16">
+        {{$slot}}  
+    </main>  
+    <div id="checkout">
+        <!-- Checkout will insert the payment form here -->
+    </div>
 </body>
 </html>

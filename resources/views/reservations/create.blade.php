@@ -2,10 +2,12 @@
     <form action="{{route("reservations.store")}}" method="POST"  class=" px-5 py-7 rounded-2 w-full sm:w-[40%] mx-auto  mt-5">
         @csrf
         <h3 class="text-center m-4 text-2xl font-sm dark:text-white">Ajouter Reservation</h3>
-
+        <x-error-message/>
         <x-input label="full name name" type='text' name="fullName" />
         <x-input label="email" type='email' name="email"/>
         <x-input label="price" type='number' name="price"/>
+        <x-input label="date_arive" type='date' name="date_arive"/>
+        <x-input label="date_depart" type='date' name="date_depart"/>
         
 
         <x-input-label>Details</x-input-label>

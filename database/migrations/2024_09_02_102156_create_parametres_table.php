@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('parametres', function (Blueprint $table) {
             $table->id();
-            $table->string('politique');
-            $table->longText('about_us');
+            $table->string('politique')->nullable();
+            $table->longText('about_us')->nullable();
+            $table->string('lang')->unique();
             $table->timestamps();
         });
     }

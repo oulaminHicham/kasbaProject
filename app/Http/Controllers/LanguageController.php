@@ -15,6 +15,7 @@ class LanguageController extends Controller
         // Store the language in the session
         // session(['language' => $language]);
         session()->put('language' , $language);
+        // App::get('local')
 
         return redirect()->back()->with(['language_switched' => $language]);
     }

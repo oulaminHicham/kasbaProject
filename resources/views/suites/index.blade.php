@@ -46,9 +46,6 @@
                                         <td class="px-6 py-4">{{$suite->prix}} MAD</td>
 
                                         <td class="px-2  flex gap-1 h-[100px] items-center">
-                                            {{-- <a href="{{route('suites.show' , $suite->id)}}" class="rounded-md bg-blue-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                                                show
-                                            </a> --}}
                                             <x-show
                                                 id="{{$suite->id}}"
                                                 price="{{$suite->prix}}"
@@ -61,13 +58,10 @@
                                                 class="rounded-md bg-green-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                                                 Edit
                                             </a>
-                                            <form action="{{route('suites.destroy' , $suite->id)}}" method="POST" class="inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="rounded-md bg-red-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                                                    Delete
-                                                </button>
-                                            </form>
+                                            <x-confirm-delete
+                                                id="{{$suite->id}}"
+                                                theRoute='suites'
+                                            />
                                         </td>
                                     </tr>
                                 @endforeach

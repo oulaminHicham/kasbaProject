@@ -36,6 +36,8 @@ class SuiteController extends Controller
             "classification" =>["required" , 'string'] , 
             "prix" =>["required" ] , 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
+            "num_persan"=>['required' , 'integer']
+
         ]);
         $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path('images'), $imageName);
@@ -46,6 +48,7 @@ class SuiteController extends Controller
             "classification"=>$request->classification ,
             "prix"=>$request->prix ,
             "image"=>"images/$imageName" ,
+            "num_persan"=>$request->num_persan ,
         ]);
         return to_route("suites.index");
     }

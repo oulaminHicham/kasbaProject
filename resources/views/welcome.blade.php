@@ -1,9 +1,9 @@
 <x-main-layout>
-    <section class="relative flex justify-between items-center">
-        <img id="carsoulImager" src="{{url('images/img5.jpg')}}" class="w-full max-h-[600px]" alt="">
+    <section class="">
+        <img id="carsoulImager" src="{{url('images/img5.jpg')}}" class="w-full max-h-[600px]" alt="cover">
     </section>
     
-    <section class=" px-52 py-10 ">
+    <section class=" px-5 sm:px-52 py-10 ">
         <main class="flex justify-center items-center">
             <img class="w-52 animate-rotate-x " src="{{url('images/logo-removebg-preview.png')}}" alt="">
             <h3 class="animate-bounce mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
@@ -11,13 +11,14 @@
             </h3>
         </main>
 
-        <main id="about" class="">
+        <main id="about" class="w-full">
             <p id="" class="animate-rotate-x mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest
              first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900
               dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
               @lang('general.aboutContent')
             </p>
         </main>
+
         <main>
             
 
@@ -43,22 +44,9 @@
                 </div>
             </div>
         </main>
-
-       
-
+        <x-skoura-map/>
     </section>
     <aside>
-        
-
-
-       
-        
-
-
-
-
-
-
     </aside>
     <x-footer/>
 </x-main-layout>
