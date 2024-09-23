@@ -24,7 +24,7 @@ class MessageController extends Controller
             'message'=>'required|string'
         ]);
         Meassage::create($request->all());
-        return redirect('/');
+        return to_route('welcome');
     }
 
     public function messages(){

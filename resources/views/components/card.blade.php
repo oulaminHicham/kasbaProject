@@ -29,7 +29,7 @@
                 </dl>
             </p>
             <div class="flex justify-center items-baseline my-8">
-                <span class="mr-2 text-1xl font-extrabold">{{$prix}} MAD</span>
+                <span class="mr-2 text-1xl font-extrabold">{{$prix}} $</span>
                 <span class="text-gray-500 dark:text-gray-400">/night</span>
             </div>
             <div class="flex flex-col gap-5">

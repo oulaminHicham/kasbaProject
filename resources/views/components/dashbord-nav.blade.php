@@ -80,7 +80,6 @@
                       <x-slot name="trigger">
                   </x-dropdown>
               </div>
-              <x-select-language/>
               </div>
 
             </div>

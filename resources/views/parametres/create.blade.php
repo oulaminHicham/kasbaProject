@@ -11,10 +11,10 @@
             name="lang"
         >
             <option selected>Choisir Un langue </option>
-            <option value="english" >english</option>
-            <option value="french" >french</option>
-            <option value="arbic">arabic</option>
-            <option value="spanish" >spanish</option>
+            <option value="en" >english</option>
+            <option value="fr" >french</option>
+            <option value="ar">arabic</option>
+            <option value="es" >spanish</option>
         </select>
 
         <x-input-label>about</x-input-label>

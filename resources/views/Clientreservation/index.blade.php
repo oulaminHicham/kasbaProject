@@ -14,7 +14,20 @@
         <h3>@lang('general.feild _reservation_msg')</h3>
         </div>
         @endsession
-            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 w-[90%] mx-auto">
+            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-5 w-[90%] mx-auto">
+                <div>
+                    <select
+                    class="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500
+                        focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600
+                        dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+                        dark:focus:border-blue-500 mt-7"
+                     name="currency">
+                        <option value="USD" selected>MAD</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </div>
                 <div >
                     <x-input type="number" label="{{__('general.num_of_personne')}}" name="nbrPersonne" value={{1}}/>
                 </div>

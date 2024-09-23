@@ -40,8 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('reservations' , ReservationController::class);
     // parmetre routes
     Route::resource('parametres' , ParametreController::class);
-    // manage contact
-    Route::resource('contact' , MessageController::class);
     // stripe dynamique add
     Route::resource('stripe' , StripeController::class);
 });
@@ -49,7 +47,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/contactUs' , function(){
     return view('contactUs');
 })->name('contactUs');
-
+// manage contact
+Route::resource('contact' , MessageController::class);
 
 // set language route 
 route::post('/language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');
