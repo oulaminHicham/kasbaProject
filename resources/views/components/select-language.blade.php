@@ -13,20 +13,9 @@
             >
             French
          </option>
-        <option 
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" 
-            role="menuitem" value="ar" {{ app()->getLocale() === 'ar' ? 'selected' : '' }}
-         >
-         Arabic
-      </option>
-        <option 
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" 
-            role="menuitem" value="es" {{ app()->getLocale() === 'es' ? 'selected' : '' }}
-         >
-         spanish
-      </option>
     </select>
 </form>
+
 
 
 

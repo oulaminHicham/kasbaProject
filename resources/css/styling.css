@@ -21,3 +21,16 @@
     /* width: 100% !important; */
     height: 950px;
 }
+.experiences-cursal{
+    background-image: url('../../public/images/img13.jpg');
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+.experience--title{
+    text-shadow: 2px 2px #181a1d;
+}
+.experience-page--{
+    background-image:url('../../public/images/img15.jpg') ;
+    background-repeat: no-repeat;
+    background-size:contain;
+}

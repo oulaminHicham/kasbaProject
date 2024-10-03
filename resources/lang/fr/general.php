@@ -4,6 +4,8 @@ return[
     'seursh'=>'Recherche',
     'navigation'=>[
         "home"=>'Accueil',
+        "howWeAre"=>'Qui sommes-nous ?',
+        "experiences"=>"Expériences",
         "about" =>"a propos" , 
         'Contact'=>"Contact" ,
         'reservation'=>'Réservation',
@@ -34,12 +36,45 @@ return[
         'premium'=>"Hébergements premiums" ,
         'premium_content'=>"Nos partenaires sont tous des établissements d'excellente réputation. Tous les budgets sont adaptables..",
         'qualified_guide'=>"Guides diplômés",
-        'qualified_guide_content'=>"Pas de faux guides ici. Chez Alfalfa, la qualité de service est primordiale. Les guides sont diplômés et expérimentés."
+        'qualified_guide_content'=>"Pas de faux guides ici. Chez skourahouse, la qualité de service est primordiale. Les guides sont diplômés et expérimentés."
     ],
+    'footer'=>[
+        'about'=>"skourahouse est spécialisée dans l’écotourisme, pour des expériences immersives au cœur de la vie de l’Oasis. Grâce à un solide réseau de partenaires  nous pouvons proposer tous types d’expériences clés en main.",
+        'plan'=>'plan du site',
+        'contact'=>'contact nous',
+        'click'=>'Cliquez ici'
+    ],
+    'experiences_page'=>[
+        'content'=>"
+                Excursions Ouarzazate ou à Skoura ? Nous vous offrons bien plus que ça… Voici les expériences skourahouse que nous pouvons vous proposer !
+
+                Pour plus d’informations ou une demande personnalisée, contactez-nous via le bouton WhatsApp ou par mail dans la page contact.
+
+                Nous espérons vous voir très vite découvrir le Sud Marocain, et partager avec vous une partie de cette magie…
+        ",
+        'visit_title'=>"Visiter la Palmeraie de Skoura" ,
+        'visit_content'=>"Ne manquez pas ce spectacle. L’écosystème Oasien est une magnifique histoire, en plus d’être d’un charme fou. C’est la seule palmeraie habitée et cultivée du Maroc, mêlant nature sauvage, kasbahs anciennes et paysages majestueux. La visite est possible à pieds, en vélo ou à dos d’âne. La durée est adaptable à votre guise. Visites thématiques possibles.",
+        'period'=>"Période : Toute l’année",
+        'options'=>"Options : Déjeuner ou thé chez l’habitant",
+        'thematics_title'=>"Excursions thématiques",
+        'thematics_content'=>"Excusions Ouarzazate ou alentours ? Skoura, Boumalne Dades, Tinghir, Aît Ben Haddou, la vallée des amandiers…Vous voulez explorer un thème particulier ? skourahouse vous propose divers sujet spécifiques pour vos excursions : Architecture, Histoire, Biodiversité, Géologie, Photographie, Sport, Environnement Culturel… Il y en à pour tous les goûts ! Il vous suffit de demander et nous ferons le reste. Un service entièrement sur-mesure",
+        'thematics_duaration'=>'Durée : 1 à plusieurs jours. Avec ou sans hébergements. Repas chez l’habitant, pique nique ou restaurant.',
+        'camp_title'=>'skourahouse Camp' ,
+        'camp_content'=>"Découvrez notre bivouac de l’oasis Sidi Flah, à moins d’une heure de Skoura. Un cadre idyllique rien que pour vous. Le temps d’un repas ou pour une nuit inoubliable, nous vous installons une tente tout confort. Saïd, le chef cuisiner sera ravi de vous préparer des mets locaux dont lui seul à le secret. Admirez le ciel étoilé, le levé et coucher du soleil depuis ce petit coin de paradis. UNE EXCLUSIVITE skourahouse !",
+        'camp_option'=>"Transfert, dîner et petit déjeuner compris pour 1 nuit au bivouac",
+        'camp_period'=> 'Période : Printemps ,Automne et Hiver'   
+
+
+    ] ,
+    'how_we_are'=>[
+        'title'=>"skourahouse Experiences" ,
+        'name'=>'Qui sommes-nous ? ?'
+    ],
+    
     'contact_us'=>[
         'title'=>"Contactez-nous" ,
         'second_title'=>"Nous serons heureux de vous conseiller" ,
-        'content'=>"Chaque aventure est unique, c’est pourquoi ALFALFA s’engage à vous offrir un service de qualité, afin que ces moments restent gravés à jamais",
+        'content'=>"Chaque aventure est unique, c’est pourquoi skourahouse s’engage à vous offrir un service de qualité, afin que ces moments restent gravés à jamais",
         'btn'=>"Contactez-nous"
     ],
     'about_skoura'=>'a propos skoura',

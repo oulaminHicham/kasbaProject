@@ -20,7 +20,7 @@
           <a href="/" class="actived block py-2 px-3 text-warning-50 bg-warning-100 rounded md:bg-transparent md:p-0">@lang('general.navigation.home')</a>
         </li>
         <li>
-          <a href="#about" class="block py-2 px-3 text-warning-50  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">@lang('general.navigation.about')</a>
+          <a href="/experiences" class="block py-2 px-3 text-warning-50  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Experiences</a>
         </li>
         <li>
           <a href="{{route('contactUs')}}" class="block py-2 px-3 text-warning-50  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">@lang('general.navigation.Contact')</a>

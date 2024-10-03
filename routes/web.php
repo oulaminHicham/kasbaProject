@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+// how we are
+Route::get('/experiences' , function(){
+    return view('experiences');
+});
 //reservation page
 Route::get('/reservation' , [Clientreservation::class , 'index'])->name('reservation');
 Route::post('/card' , [PayementController::class , 'index'])->name('card');
