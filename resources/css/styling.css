@@ -1,0 +1,23 @@
+*{
+    font-family: 'ARABOLIC','Helvetica','Arial','Lucida','sans-serif';
+}
+.the-line{
+    background-color: aquamarine;
+}
+.actived{
+    color: #c18749 !important;
+}
+.discover_btn{
+    border: #f8dfa1 solid 1px ;
+
+}
+.discover_cover{
+    background-image: url("../../public/images/img3.jpg");
+    width: 100% !important;
+    height: 955px;
+}
+.contact--us{
+    background-image: url('../../public/images/img1.jpg');
+    /* width: 100% !important; */
+    height: 950px;
+}

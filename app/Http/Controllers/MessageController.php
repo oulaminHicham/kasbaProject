@@ -19,9 +19,9 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email'=>'required|email' , 
-            'subject'=>'required|string',
-            'message'=>'required|string'
+            'email'=>'required|email|max:100' , 
+            'subject'=>'required|string|max:100',
+            'message'=>'required|string|max:400'
         ]);
         Meassage::create($request->all());
         return to_route('welcome');

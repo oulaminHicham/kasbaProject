@@ -21,7 +21,7 @@
                             {{$clientName == '' ? '' : $clientName}}
                         </h3>
                         <p class="font-bold">
-                            {{$price}} MAD
+                            {{$price}} $
                         </p>
                     </div>
                     <div>

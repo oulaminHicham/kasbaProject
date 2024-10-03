@@ -43,7 +43,7 @@
                                             @endforeach
                                         </td>
                                         <td class="px-6 py-4">{{$suite->classification}}</td>
-                                        <td class="px-6 py-4">{{$suite->prix}} MAD</td>
+                                        <td class="px-2 py-4">{{$suite->prix}} $</td>
 
                                         <td class="px-2  flex gap-1 h-[100px] items-center">
                                             <x-show

@@ -23,8 +23,8 @@ export default {
         darkMode: 'class',
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans ,
-                    'Inter', 
+                sans: [
+                    'Arial', 
                     'ui-sans-serif', 
                     'system-ui', 
                     '-apple-system', 
@@ -59,8 +59,11 @@ export default {
                 
             },
             colors: {
-                primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"} ,
+                warning:{'50':'#fbf2b7' , '100':'#f8dfa1' , '200':'#c18749'} ,
+                dark:{'500':'#222','900':'#000'}
               }
+            
         },
         
     },

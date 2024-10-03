@@ -1,4 +1,4 @@
-<footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+{{-- <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
     <div class="mx-auto max-w-screen-xl text-center">
         <a href="/" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
             <img src="{{url('images/logo-removebg-preview.png')}}" alt="skourahouse" class="h-32 w-32 rounded-[50%]">
@@ -21,4 +21,10 @@
             . All Rights Reserved.
         </span>
     </div>
-  </footer>
+  </footer> --}}
+
+
+  {{-- <footer class="p-4 bg-dark-900 md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+    </div>
+  </footer> --}}

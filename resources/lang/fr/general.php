@@ -10,6 +10,38 @@ return[
         'back'=>'retoure'
 
     ] ,
+    'Experiences'=>[
+        'title'=>'skourahouse Experiences' , 
+        'second title'=>"Envie dexpériences authentiques et inoubliables ? skourahouse vous accompagne dans votre aventure." ,
+        'content'=>'Nous sommes une entreprise locale, avec une grande expérience. Etant partenaire de nombreux hébergements touristique réputés, notre exigence est optimale. Enfants de Skoura, notre équipe est spécialisé dans les expériences touristique locales, avec une connaissance du terrain incomparable.' ,
+        'discover_btn'=>'Découvrir nos expériences' ,
+    ],
+    'discover_skoura'=>[
+        'title'=>"Visiter Skoura et les alentours de Ouarzazate" ,
+        'second_title'=>'Le Sud du Maroc' ,
+        'content'=>"Nature sauvage et grands espaces, le sud du Maroc est l'endroit idéal pour sortir du quotidien. Déserts, palmeraies et montagnes exceptionnelles seront au rendez-vous de votre voyage. Dépaysement garanti !",
+        'btn'=>'Merveilles du sud' ,
+        'experience'=>"Ans d'expérience" , 
+        'satisfaits'=>'Clients satisfaits' ,
+        'guide'=>'Guides officiels',
+        'equipe'=>'Equipe de choc'
+
+    ],
+    'services_quality'=>[
+        'title'=>"Des prestations de qualité" ,
+        'team_experience'=>"Equipe expérimentée" ,
+        'team_experience_content'=>"Toute l'équipe  à une solide expérience dans l'accompagnement touristique. Votre bien-être est une priorité." ,
+        'premium'=>"Hébergements premiums" ,
+        'premium_content'=>"Nos partenaires sont tous des établissements d'excellente réputation. Tous les budgets sont adaptables..",
+        'qualified_guide'=>"Guides diplômés",
+        'qualified_guide_content'=>"Pas de faux guides ici. Chez Alfalfa, la qualité de service est primordiale. Les guides sont diplômés et expérimentés."
+    ],
+    'contact_us'=>[
+        'title'=>"Contactez-nous" ,
+        'second_title'=>"Nous serons heureux de vous conseiller" ,
+        'content'=>"Chaque aventure est unique, c’est pourquoi ALFALFA s’engage à vous offrir un service de qualité, afin que ces moments restent gravés à jamais",
+        'btn'=>"Contactez-nous"
+    ],
     'about_skoura'=>'a propos skoura',
     'success_reservation_msg'=>'Réservation effectuée avec succès',
     'feild _reservation_msg'=>'Échec de la réservation, il y a un problème!',

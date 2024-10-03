@@ -75,7 +75,5 @@ class PayementController extends Controller
     public function casncel(){
         return redirect()->route('reservation')->with('error' , 'reservation feild ther is some problem!') ;
     }
-    
 }
-
 

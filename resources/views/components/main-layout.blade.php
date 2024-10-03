@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{url('images/logo-removebg-preview.png')}}" />
     <title>skourahouse</title>
     @vite('resources/css/app.css')
+    @vite('resources/css/styling.css')
     @vite('resources/js/carsoul.js')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -13,7 +15,7 @@
 
 </head>
 @php($direction = app()->getLocale() =='ar' ? 'rtl':'ltr')
-<body  class="bg-indigo-50" dir="{{$direction}}">
+<body  class="bg-dark-900 font-sans" dir="{{$direction}}">
     <x-navbare />
     <main class="pt-16">
         {{$slot}}  

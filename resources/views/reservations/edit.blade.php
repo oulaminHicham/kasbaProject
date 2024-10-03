@@ -2,13 +2,13 @@
     <form action="{{route("reservations.update" , $reservation->id)}}" method="POST"  class=" px-5 py-7 rounded-2 w-full sm:w-[40%] mx-auto  mt-5">
         @method('PUT')
         @csrf
-        <h3 class="text-center m-4 text-2xl font-sm dark:text-white">Ajouter Reservation</h3>
+        <h3 class="text-center m-4 text-2xl font-sm dark:text-white">Edit Reservation</h3>
         <x-error-message/>
         <x-input label="first name" type='text' name="fullName" value="{{$reservation->fullName}}"/>
         <x-input label="email" type='email' name="email" value="{{$reservation->email}}"/>
         <x-input label="price" type='text' name="price" value="{{$reservation->price}}"/>
-        <x-input label="date arive" type='text' name="date_arive" value="{{$reservation->date_arive}}"/>
-        <x-input label="date depart" type='text' name="date_depart" value="{{$reservation->date_depart}}"/>
+        <x-input label="check-in" type='text' name="date_arive" value="{{$reservation->date_arive}}"/>
+        <x-input label="check-out" type='text' name="date_depart" value="{{$reservation->date_depart}}"/>
         
 
         <x-input-label>Details</x-input-label>
